@@ -175,7 +175,7 @@ $page = 1;
 							<li><a href="'.$myrole.'">Profile</a></li>';
 						}else{
 						print '
-							<li><a href="login.php">login</a></li>
+							<li><a href="login.php">Login</a></li>
 							<li><a data-toggle="modal" href="#registerModal">register</a></li>';						
 						}
 						
@@ -508,7 +508,7 @@ $page = 1;
 								<h5 class="footer-title">Job Market Contact</h5>
 								
 								<p>Address : Trưng Nữ Vương, Hải Châu, Đà Nẵng</p>
-								<p>Email : diamondcore@gmail.com<a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
+								<p><a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 

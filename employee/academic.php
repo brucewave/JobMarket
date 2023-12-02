@@ -130,7 +130,7 @@ $page = 1;
 
 					<div class="nav-mini-wrapper">
 						<ul class="nav-mini sign-in">
-							<li><a href="../logout.php">logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 							<li><a href="./">Profile</a></li>
 						</ul>
 					</div>
@@ -543,6 +543,8 @@ $page = 1;
 									<select name="country" required class="selectpicker show-tick form-control" data-live-search="true">
 									<option disabled value="">Select</option>
 						            <?php
+
+									$ccountry = '';
 									$stmtb = $conn->prepare("SELECT * FROM tbl_countries ORDER BY country_name");
                                     $stmtb->execute();
                                     $resultb = $stmtb->fetchAll();
@@ -550,7 +552,7 @@ $page = 1;
                                     foreach($resultb as $rowb)
                                     {
 										?>
-										<option <?php if ($ccountry == $rowb['country_name']) { print ' selected '; } ?> value="<?php echo $rowb['country_name']; ?>"><?php echo $rowb['country_name']; ?></option>
+											<option <?php if ($ccountry == $rowb['country_name']) { print ' selected '; } ?> value="<?php echo $rowb['country_name']; ?>"><?php echo $rowb['country_name']; ?></option>
 										<?php
 		
 	                                }
@@ -674,7 +676,7 @@ $page = 1;
 								<h5 class="footer-title">Job Market Contact</h5>
 								
 								<p>Address : Trưng Nữ Vương, Hải Châu, Đà Nẵng</p>
-								<p>Email : diamondcore@gmail.com<a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
+								<p><a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 

@@ -160,7 +160,7 @@ $job_title = $row['title'];
 
 					<div class="nav-mini-wrapper">
 						<ul class="nav-mini sign-in">
-							<li><a href="../logout.php">logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 							<li><a href="./">Profile</a></li>
 						</ul>
 					</div>
@@ -397,7 +397,7 @@ $job_title = $row['title'];
 								<h5 class="footer-title">Job Market Contact</h5>
 								
 								<p>Address : Trưng Nữ Vương, Hải Châu, Đà Nẵng</p>
-								<p>Email : diamondcore@gmail.com<a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
+								<p><a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 

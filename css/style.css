@@ -5178,7 +5178,6 @@ ul.bottom-footer-menu.for-social li:after {
     padding-top: 60px;
     margin-top: -20px;
     margin-bottom: 20px;
-    width: 100%;
 }
 
 .admin-user-item {
@@ -5213,7 +5212,7 @@ ul.bottom-footer-menu.for-social li:after {
 }
 
 .admin-user-item.for-employer .image {
-    width: 200px;
+    width: 100%;
     margin: 0 auto 15px;
     border-radius: 0;
     border: 1px double #E6E6E6;

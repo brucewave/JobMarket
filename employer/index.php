@@ -104,7 +104,7 @@ header("location:../");
 
 					<div class="nav-mini-wrapper">
 						<ul class="nav-mini sign-in">
-							<li><a href="../logout.php">logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 							<li><a href="./">Profile</a></li>
 						</ul>
 					</div>
@@ -146,20 +146,67 @@ header("location:../");
 							
 								<div class="admin-sidebar">
 										
-										
+								<h4> <?php echo "<center> $compname </center>"; ?></h4>
 									<div class="admin-user-item for-employer">
 										
 										<div class="image">
 										<?php 
 										if ($logo == null) {
-										print '<center>Company Logo Here</center>';
+
+										echo '<form action="app/new-dp.php" method="POST" enctype="multipart/form-data">
+											<div class="row gap-20">
+												<div class="col-sm-12 col-md-12">
+												
+													<div class="form-group bootstrap3-wysihtml5-wrapper">
+														<label>Company Logo</label>
+														<input accept="image/*" type="file" name="image"  required >
+													</div>												
+												</div>
+												
+										<div class="clear"></div>
+
+										<div class="col-sm-12 mt-10">
+											<button type="submit" class="btn btn-primary">Update</button>
+											<?php 
+												if ($logo == null) {
+												}else{
+											?>
+											<a onclick = "return confirm("Are you sure you want to delete your logo ?")" class="btn btn-primary btn-inverse" href="app/drop-dp.php">Delete</a> <?php
+												}
+											?>
+										</div>';
+
 										}else{
-										echo '<center><img alt="image" title="'.$compname.'" width="180" height="100" src="data:image/jpeg;base64,'.base64_encode($logo).'"/></center>';	
+										echo '<center><img alt="image" title="'.$compname.'" width="180" height="100" src="data:image/jpeg;base64,'.base64_encode($logo).'"/></center>
+										<br>
+										<hr>
+										<form action="app/new-dp.php" method="POST" enctype="multipart/form-data">
+										<div class="row gap-20 mb-5">
+											<div class="col-sm-12 col-md-12">
+											
+												<div class="form-group bootstrap3-wysihtml5-wrapper">
+													<label>Change Your Logo</label>
+													<input accept="image/*" type="file" name="image"  required >
+												</div>												
+											</div>
+											
+									<div class="clear"></div>
+
+									<div class="col-sm-12 mt-10">
+										<button type="submit" class="btn btn-primary">Update</button>
+										<?php 
+											if ($logo == null) {
+											}else{
+										?>
+										<a onclick = "return confirm("Are you sure you want to delete your logo ?")" class="btn btn-primary btn-inverse" href="app/drop-dp.php">Delete</a> <?php
+											}
+										?>
+									</div>
+										';	
 										}
 										?><br>
 										</div>
 										
-										<h4><?php echo "$compname"; ?></h4>
 										
 									</div>
 									
@@ -395,31 +442,31 @@ header("location:../");
 											
 										</form><br>
 										
-										<form action="app/new-dp.php" method="POST" enctype="multipart/form-data">
-										<div class="row gap-20">
-										<div class="col-sm-12 col-md-12">
+										<!-- <form action="app/new-dp.php" method="POST" enctype="multipart/form-data">
+											<div class="row gap-20">
+												<div class="col-sm-12 col-md-12">
 												
-										<div class="form-group bootstrap3-wysihtml5-wrapper">
-										<label>Company Logo</label>
-										<input accept="image/*" type="file" name="image"  required >
-										</div>
-													
-										</div>
+													<div class="form-group bootstrap3-wysihtml5-wrapper">
+														<label>Company Logo</label>
+														<input accept="image/*" type="file" name="image"  required >
+													</div>												
+												</div>
 												
 										<div class="clear"></div>
 
 										<div class="col-sm-12 mt-10">
-										<button type="submit" class="btn btn-primary">Update</button>
-										<?php 
-										if ($logo == null) {
+											<button type="submit" class="btn btn-primary">Update</button>
+											<?php 
+												if ($logo == null) {
+												}else{
+											?>
+											<a onclick = "return confirm('Are you sure you want to delete your logo ?')" class="btn btn-primary btn-inverse" href="app/drop-dp.php">Delete</a> <?php
+												}
+											?>
+										</div>
 
-										}else{
-										?><a onclick = "return confirm('Are you sure you want to delete your logo ?')" class="btn btn-primary btn-inverse" href="app/drop-dp.php">Delete</a> <?php
-										}
-										?>
-										</div>
-										</div>
-										</form>
+									</div>
+										</form> -->
 									
 								</div>
 
@@ -478,7 +525,7 @@ header("location:../");
 								<h5 class="footer-title">Job Market Contact</h5>
 								
 								<p>Address : Trưng Nữ Vương, Hải Châu, Đà Nẵng</p>
-								<p>Email : diamondcore@gmail.com<a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
+								<p><a href="mailto:diamondcore@gmail.com">diamondcore@gmail.com</a></p>
 								<p>Phone : <a href="tel:+233546607474">+233 546 607 474</a></p>
 								
 							</div>

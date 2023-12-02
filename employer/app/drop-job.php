@@ -16,7 +16,7 @@ $stmt = $conn->prepare("DELETE FROM tbl_job_application WHERE job_id= :jobid");
 $stmt->bindParam(':jobid', $job_id);
 $stmt->execute();
 
-header("location:../my-jobs.php?r=0173");					  
+header("location:../my-jobs.php");					  
 }catch(PDOException $e)
 {
 

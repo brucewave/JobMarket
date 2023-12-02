@@ -146,7 +146,7 @@ foreach($result as $row)
 
 					<div class="nav-mini-wrapper">
 						<ul class="nav-mini sign-in">
-							<li><a href="../logout.php">logout</a></li>
+							<li><a href="../logout.php">Logout</a></li>
 							<li><a href="./">Profile</a></li>
 						</ul>
 					</div>
